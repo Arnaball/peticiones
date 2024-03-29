@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const ejecutar = async () => {
-    const url = ""; // Pones aquí la url del servicio web
+    const url = ""; 
     const numRequests = 1000;
 
     try {
@@ -15,4 +15,10 @@ const ejecutar = async () => {
 }
 
 
-ejecutar();
+const ejecutarIndefinidamente = async () => {
+    while (true) {
+        await ejecutar();
+    }
+}
+
+ejecutarIndefinidamente();
